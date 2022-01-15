@@ -8,7 +8,8 @@ document.addEventListener('keydown', window);
 window.handleEvent = event => {
 	switch (event.type) {
 		case 'click':
-			for (let itemInfo of infoContent.children) itemInfo.classList.toggle('none');
+			if (event.target.closest('main'))
+				for (let itemInfo of infoContent.children) itemInfo.classList.toggle('none');
 			break;
 		case 'keydown':
 			if (event.code === 'Space') {
