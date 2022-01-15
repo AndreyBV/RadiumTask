@@ -101,9 +101,18 @@ body {
 		color: $font_color_attention;
 		align-self: flex-end;
 		text-align: right;
-		transition: text-shadow 0.1s ease-in;
 		&:hover {
-			text-shadow: 0 0 2rem $font_color_attention;
+			animation: loopTextShadow 0.8s ease-in;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+		@keyframes loopTextShadow {
+			from {
+				text-shadow: 0 0 0rem $font_color_attention;
+			}
+			to {
+				text-shadow: 0 0 1.5rem $font_color_attention;
+			}
 		}
 
 		@media (max-width: 830px) {

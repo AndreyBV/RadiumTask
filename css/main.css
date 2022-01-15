@@ -159,12 +159,33 @@ body {
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-align: right;
-  -webkit-transition: text-shadow 0.1s ease-in;
-  transition: text-shadow 0.1s ease-in;
 }
 
 .info__vacancy-name-local:hover {
-  text-shadow: 0 0 2rem #ec4c56;
+  -webkit-animation: loopTextShadow 0.8s ease-in;
+          animation: loopTextShadow 0.8s ease-in;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes loopTextShadow {
+  from {
+    text-shadow: 0 0 0rem #ec4c56;
+  }
+  to {
+    text-shadow: 0 0 1.5rem #ec4c56;
+  }
+}
+
+@keyframes loopTextShadow {
+  from {
+    text-shadow: 0 0 0rem #ec4c56;
+  }
+  to {
+    text-shadow: 0 0 1.5rem #ec4c56;
+  }
 }
 
 @media (max-width: 830px) {
