@@ -1,0 +1,13 @@
+html,
+body {
+	height: 100%;
+	background: #242933;
+	color: #f6f0e9;
+}
+
+._container {
+	max-width: 1045px;
+	padding: 0 30px;
+	margin: 0 auto;
+	box-sizing: content-box;
+}
