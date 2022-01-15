@@ -10,7 +10,7 @@ body {
 	height: 100%;
 	background: var(--background-color);
 	color: var(--font-color);
-	font-family: 'Gotham Pro', 'Roboto Mono', sans-serif;
+	font-family: 'Gotham Pro', sans-serif;
 }
 
 ._container {
