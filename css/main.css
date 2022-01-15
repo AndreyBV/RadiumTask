@@ -96,3 +96,7 @@ body {
 }
 .footer__copyright {
 }
+
+.none {
+	display: none;
+}
