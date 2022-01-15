@@ -1,8 +1,15 @@
+/* ! Не поддерживается IE */
+:root {
+	--background-color: #242933;
+	--font-color: #f6f0e9;
+	--font-color-attention: #ec4c56;
+}
+
 html,
 body {
 	height: 100%;
-	background: #242933;
-	color: #f6f0e9;
+	background: var(--background-color);
+	color: var(--font-color);
 	font-family: 'Gotham Pro', 'Roboto Mono', sans-serif;
 }
 
@@ -70,18 +77,18 @@ body {
 	transition: text-shadow 0.1s ease-in;
 }
 .info__vacancy-name-general:hover {
-	text-shadow: 0 0 2rem #f6f0e9;
+	text-shadow: 0 0 2rem var(--font-color);
 }
 .info__vacancy-name-local {
 	font-weight: 800;
 	max-width: 50%;
-	color: #ec4c56;
+	color: var(--font-color-attention);
 	align-self: flex-end;
 	text-align: right;
 	transition: text-shadow 0.1s ease-in;
 }
 .info__vacancy-name-local:hover {
-	text-shadow: 0 0 2rem #ec4c56;
+	text-shadow: 0 0 2rem var(--font-color-attention);
 }
 .footer {
 	flex: 0 0 auto;
