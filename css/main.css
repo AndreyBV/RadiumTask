@@ -101,6 +101,9 @@ body {
 }
 
 .info__my-name {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   font-size: 4rem;
   -webkit-transition: -webkit-transform 0.2s ease-in;
   transition: -webkit-transform 0.2s ease-in;
