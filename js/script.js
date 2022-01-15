@@ -1,9 +1,11 @@
+import Glitch from './glitch.js';
+
 const infoContent = document.querySelector('.info__content');
 
-document.addEventListener('click', this);
-document.addEventListener('keydown', this);
+document.addEventListener('click', window);
+document.addEventListener('keydown', window);
 
-function handleEvent(event) {
+window.handleEvent = event => {
 	switch (event.type) {
 		case 'click':
 			for (let itemInfo of infoContent.children) itemInfo.classList.toggle('none');
@@ -20,4 +22,21 @@ function handleEvent(event) {
 			}
 			break;
 	}
-}
+};
+
+const infoName = document.querySelector('.info__my-name');
+const glitchName = new Glitch(infoName, 'info__my-name-glitch', {
+	numberGlitchElements: 10,
+	textPosition: { minX: -20, minY: -5, maxX: 10, maxY: 5 },
+	sizeGlitchBox: { maxWidth: 200, maxHeight: 20 },
+	frequency: { min: 4, max: 7 },
+	background: '#242933',
+	color: 'white',
+});
+
+infoName.addEventListener('mouseenter', event => {
+	glitchName.start();
+});
+infoName.addEventListener('mouseleave', event => {
+	glitchName.stop();
+});
